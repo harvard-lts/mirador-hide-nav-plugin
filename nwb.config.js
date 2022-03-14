@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   type: 'react-component',
   npm: {
@@ -8,5 +10,11 @@ module.exports = {
         react: 'React'
       }
     }
-  }
+  },
+  webpack: {
+    aliases: {
+      react: path.resolve('./', 'node_modules', 'react'),
+      'react-dom': path.resolve('./', 'node_modules', 'react-dom'),
+    },
+  },
 }
