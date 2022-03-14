@@ -1,15 +1,13 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+import Mirador from 'mirador/dist/es/src/index';
+import hideViewerNavigation from '../../src';
 
-import Example from '../../src'
+const config = {
+  id: 'demo',
+  windows: [{
+    loadedManifest: 'https://iiif.lib.harvard.edu/manifests/ids:10274486',
+  }],
+};
 
-export default class Demo extends Component {
-  render() {
-    return <div>
-      <h1>mirador-hide-nav-plugin Demo</h1>
-      <Example/>
-    </div>
-  }
-}
-
-render(<Demo/>, document.querySelector('#demo'))
+Mirador.viewer(config, [
+  hideViewerNavigation,
+]);

@@ -44,4 +44,3 @@ export default {
   component: hideViewerNavigation,
   mapStateToProps,
 }
-
