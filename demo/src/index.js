@@ -1,5 +1,5 @@
 import Mirador from 'mirador/dist/es/src/index';
-import hideViewerNavigation from '../../src';
+import hideViewerNavigationPlugin from '../../src';
 
 const config = {
   id: 'demo',
@@ -9,5 +9,5 @@ const config = {
 };
 
 Mirador.viewer(config, [
-  hideViewerNavigation,
+  hideViewerNavigationPlugin,
 ]);
