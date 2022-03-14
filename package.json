@@ -1,5 +1,5 @@
 {
-  "name": "mirador-hide-nav-plugin",
+  "name": "@harvard-lts/mirador-hide-nav-plugin",
   "version": "1.0.0",
   "description": "mirador-hide-nav-plugin React component",
   "main": "lib/index.js",
