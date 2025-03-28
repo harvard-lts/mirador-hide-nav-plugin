@@ -32,7 +32,9 @@ class hideViewerNavigation extends Component {
   }
 
   componentDidUpdate() {
-    if (this.isIndividualImage()) {
+    let isIndividualImage = this.isIndividualImage();
+
+    if (isIndividualImage) {
       window.document.querySelectorAll('.mirador-osd-info').forEach((elem) => elem.remove());
       window.document.querySelectorAll('.mirador-osd-navigation').forEach((elem) => elem.remove());
       window.document.querySelectorAll('[class*="Connect(WithPlugins(ZoomControls))-divider-"]').forEach((elem) => elem.remove());
