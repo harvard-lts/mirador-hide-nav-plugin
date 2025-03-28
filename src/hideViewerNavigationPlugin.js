@@ -3,16 +3,25 @@ import { getManifestoInstance } from 'mirador/dist/es/src/state/selectors/manife
 
 class hideViewerNavigation extends Component {
 
-  viewingHint() {
+  isIndividualImage() {
     const { manifest } = this.props;
-    if (!(
+    const individualValue = 'individuals';
+
+    // IIIF v2
+    if (
       manifest
       && manifest.getSequences()
       && manifest.getSequences()[0]
       && manifest.getSequences()[0].getProperty('viewingHint')
-    )) return [''];
+    ) return manifest.getSequences()[0].getProperty('viewingHint') == individualValue
 
-    return manifest.getSequences()[0].getProperty('viewingHint');
+    // IIIF v3
+    if (
+      manifest
+      && manifest.getBehavior()
+    ) return manifest.getBehavior() == individualValue
+
+    return false;
   }
 
   render() {
@@ -23,9 +32,8 @@ class hideViewerNavigation extends Component {
   }
 
   componentDidUpdate() {
-    let viewingHint = this.viewingHint();
-
-    if (viewingHint == 'individuals') {
+    const isIndividualImage = this.isIndividualImage()
+    if (isIndividualImage) {
       window.document.querySelectorAll('.mirador-osd-info').forEach((elem) => elem.remove());
       window.document.querySelectorAll('.mirador-osd-navigation').forEach((elem) => elem.remove());
       window.document.querySelectorAll('[class*="Connect(WithPlugins(ZoomControls))-divider-"]').forEach((elem) => elem.remove());
