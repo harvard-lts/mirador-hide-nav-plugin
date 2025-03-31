@@ -6,8 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     id: "mirador",
     windows: [
       {
-        manifestId: "https://iiif.lib.harvard.edu/manifests/ids:10274486",
+        manifestId: "https://nrs.harvard.edu/URN-3:DOAK.RESLIB:40977022:MANIFEST:2"
       },
+      {
+        manifestId: "https://nrs.harvard.edu/URN-3:DOAK.RESLIB:40977022:MANIFEST:3"
+      }
     ]
   };
 
