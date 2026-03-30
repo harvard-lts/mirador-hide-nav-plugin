@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     id: "mirador",
     windows: [
       {
-        manifestId: "https://nrs.harvard.edu/URN-3:DOAK.RESLIB:40977022:MANIFEST:2"
+        manifestId: "https://nrs.lib.harvard.edu/URN-3:DOAK.RESLIB:102561403:MANIFEST:2"
       },
       {
-        manifestId: "https://nrs.harvard.edu/URN-3:DOAK.RESLIB:40977022:MANIFEST:3"
+        manifestId: "https://nrs.lib.harvard.edu/URN-3:DOAK.RESLIB:102561403:MANIFEST:3"
       }
     ]
   };
