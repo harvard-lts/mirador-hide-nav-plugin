@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getManifestoInstance } from 'mirador/dist/es/src/state/selectors/manifests';
+import { getManifestoInstance } from 'mirador';
 
 class hideViewerNavigation extends Component {
 

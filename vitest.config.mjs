@@ -1,20 +1,19 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  root: 'demo',
-  server: {
-    port: 9000,
-    open: true,
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./setupTests.js'],
+    globals: true,
+    transformMode: {
+      web: [/\.[jt]sx?$/],
+    },
   },
   esbuild: {
     loader: 'jsx',
-    include: /src\/.*\.js$/,
+    include: /(src|__tests__)\/.*\.jsx?$/,
     exclude: [],
   },
   optimizeDeps: {
@@ -23,8 +22,5 @@ export default defineConfig({
         '.js': 'jsx',
       },
     },
-  },
-  build: {
-    outDir: 'dist',
   },
 });

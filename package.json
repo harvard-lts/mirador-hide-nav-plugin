@@ -5,8 +5,8 @@
   "keywords": [
     "react-component"
   ],
-  "version": "1.0.9",
-  "description": "mirador-analytics-plugin React component",
+  "version": "2.0.0-beta.0",
+  "description": "Mirador 4 plugin that hides viewer navigation chrome for individual-image manifests",
   "module": "dist/es/index.js",
   "files": [
     "dist"
@@ -23,29 +23,40 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "jquery": "^3.7.0",
-    "prop-types": "^15.8.1",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "prop-types": "^15.8.1"
+  },
+  "peerDependencies": {
+    "mirador": "^4.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "@mui/material": "^7.0.0",
+    "@mui/system": "^7.0.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.26.4",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^7.0.0",
+    "@mui/system": "^7.0.0",
     "@rollup/plugin-babel": "^6.0.3",
     "@testing-library/jest-dom": "^6.1.5",
-    "@testing-library/react": "^12.0.0",
+    "@testing-library/react": "^16.0.0",
     "@vitejs/plugin-react": "^5.1.2",
-    "@vitest/coverage-v8": "^4.0.17",
-    "@vitest/ui": "^4.0.17",
-    "jsdom": "^27.4.0",
-    "mirador": "^3.4.3",
+    "@vitest/coverage-v8": "^1.0.0",
+    "@vitest/ui": "^1.0.0",
+    "jsdom": "^23.0.0",
+    "mirador": "^4.0.0",
     "npm-run-all": "^4.1.5",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
     "rollup": "^3.29.5",
     "url": "^0.11.4",
-    "vite": "^7.3.1",
-    "vitest": "^4.0.17",
-    "whatwg-fetch": "^3.6.2"
+    "vite": "^5.0.0",
+    "vitest": "^1.0.0"
   }
 }
