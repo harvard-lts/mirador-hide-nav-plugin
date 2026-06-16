@@ -26,9 +26,7 @@ class hideViewerNavigation extends Component {
 
   render() {
 
-    return (
-      <></>
-    );
+    return ("");
   }
 
   componentDidUpdate() {
