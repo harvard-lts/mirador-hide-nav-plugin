@@ -1,4 +1,7 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
+
+vi.mock('mirador', () => ({ getManifestoInstance: vi.fn() }));
+
 import plugins, { hideViewerNavigationPlugin } from '../src/index.js';
 
 describe('mirador-hide-nav-plugin smoke test', () => {

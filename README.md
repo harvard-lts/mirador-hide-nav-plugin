@@ -1,5 +1,19 @@
 # mirador-hide-nav-plugin
-A Mirador 3 plugin that hides viewer navigation manifest-defined single images. 
+
+[![Node Unit Tests](https://github.com/harvard-lts/mirador-hide-nav-plugin/actions/workflows/coverage-node.yml/badge.svg)](https://github.com/harvard-lts/mirador-hide-nav-plugin/actions/workflows/coverage-node.yml)
+
+<a href="https://github.com/harvard-lts/mirador-hide-nav-plugin/actions/workflows/coverage-node.yml"><img src="https://github.com/harvard-lts/mirador-hide-nav-plugin/raw/badges/test-coverage/coverage.svg"></a>
+
+A Mirador 4 plugin that hides viewer navigation for manifest-defined single images.
+
+## Compatibility
+
+This plugin is compatible with **Mirador 4** (React 18/19, MUI 7). It is **not**
+backwards compatible with Mirador 3 — the upgrade contains breaking changes
+(top-level `mirador` imports, function/hook components, MUI 7 + Emotion).
+
+Versioning convention: Mirador 4 releases are tagged `2.x`; Mirador 3 releases
+are tagged `0.x` or `1.x`. Pin a `0.x`/`1.x` release if you still need Mirador 3.
 
 ## Requirements
 
@@ -24,7 +38,7 @@ The following are some useful scripts can be ran using `npm run <script>`. A ful
 
 ## Installing in Mirador
 
-The `mirador-hide-nav-plugin` requires an instance of Mirador 3. Visit the [Mirador wiki](https://github.com/ProjectMirador/mirador/wiki) to learn how to [install an existing plugin](https://github.com/ProjectMirador/mirador/wiki/Mirador-3-plugins#installing-an-existing-plugin) and for additional information about plugins.
+The `mirador-hide-nav-plugin` requires an instance of Mirador 4. Visit the [Mirador wiki](https://github.com/ProjectMirador/mirador/wiki) to learn how to [create a Mirador 4 plugin](https://github.com/ProjectMirador/mirador/wiki/Creating-a-Mirador-4-Plugin) and for additional information about plugins.
 
 Package you will need to install:
 
